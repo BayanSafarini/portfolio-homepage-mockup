@@ -1,0 +1,57 @@
+@use '../utils/utils' as utils;
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #1f2d3d14;
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease both;
+  animation-timeline: scroll-fade-timeline;
+  animation-range: entry 0% cover 40%;
+  transition: transform 260ms ease, box-shadow 260ms ease;
+
+  @include utils.respond(desktop) {
+    &:hover,
+    &:focus-within {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(19, 38, 54, 0.08);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: utils.$text-color;
+  }
+
+  &__desc {
+    font-size: 0.95rem;
+    color: utils.$muted-color;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

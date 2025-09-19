@@ -1,0 +1,75 @@
+@use '../utils/utils' as utils;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: utils.$primary-color;
+  color: #fff;
+  padding: 1rem 0;
+
+  &__inner {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  &__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1rem;
+    background: none;
+    border: none;
+
+    @include utils.respond(desktop) {
+    cursor: pointer;
+    }
+
+    span {
+      display: block;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+  }
+
+  @include utils.respond(tablet) {
+    &__burger {
+      display: none;
+    }
+  }
+  &__nav {
+    display: none;
+    gap: 1.5rem;
+
+    @include utils.respond(tablet) {
+      display: flex;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+
+    @include utils.respond(desktop) {
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+}

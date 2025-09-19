@@ -1,0 +1,37 @@
+@use '../utils/utils' as utils;
+
+.button {
+  padding: 0.7rem 1.25rem;
+  border-radius: 9px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 140px;
+  text-decoration: none;
+  
+  @include utils.respond(desktop) {
+    cursor: pointer;
+    
+  }
+
+  &--primary {
+    background: utils.$primary-color;
+    color: #fff;
+
+    @include utils.respond(desktop) {
+      &:hover {
+        background: darken(utils.$primary-color, 8%);
+      }
+    }
+  }
+
+  &--secondary {
+    background: utils.$secondary-color;
+    color: #fff;
+
+    @include utils.respond(desktop) {
+      &:hover {
+        background: darken(utils.$secondary-color, 8%);
+      }
+    }
+  }
+}

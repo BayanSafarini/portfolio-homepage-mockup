@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio Homepage Mockup</title>
+    <link rel="stylesheet" href="../dist/main.css" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Skip link -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Header: logo left, nav right -->
+    <header class="header" role="banner">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="#" class="header__logo-link">MyLogo</a>
+        </div>
+
+        <!-- Burger icon only for mobile -->
+        <button class="header__burger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="header__nav" role="navigation" aria-label="Main navigation">
+          <a class="header__link" href="#latest-projects">Projects</a>
+          <a class="header__link" href="#skills">Skills</a>
+          <a class="header__link" href="#resume">Resume</a>
+          <a class="header__link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" role="main">
+      <!-- Bio Banner -->
+      <section id="bio" class="bio" aria-labelledby="bio-title">
+        <div class="bio__inner">
+          <div class="bio__image-wrapper">
+            <img
+              class="bio__image"
+              src="../src/img/placeholder-man.jpg"
+              alt="Headshot of Your Name"
+              width="320"
+              height="320"
+            />
+          </div>
+          <div class="bio__content">
+            <h1 id="bio-title" class="bio__title">
+              Your Name Here – Frontend Web Developer
+            </h1>
+            <p class="bio__text">
+              I specialize in crafting clean, responsive, and accessible
+              websites. My focus is on creating user-friendly interfaces with
+              modern technologies like HTML5, CSS3/SCSS, and JavaScript
+              frameworks. I enjoy turning ideas into digital experiences that
+              look great and perform well on any device.
+            </p>
+            <div class="bio__actions">
+              <a class="button button--primary" href="#latest-projects"
+                >View Projects</a
+              >
+              <a class="button button--secondary" href="#contact">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section
+        id="latest-projects"
+        class="latest-projects"
+        aria-labelledby="projects-title"
+      >
+        <h2 id="projects-title" class="latest-projects__title">
+          Latest Projects
+        </h2>
+        <div class="latest-projects__grid">
+          <article class="card" tabindex="0">
+            <img
+              class="card__image"
+              src="https://placehold.co/560x350"
+              alt="placeholder Screenshot of Project One"
+            />
+            <h3 class="card__title">FreshBrew Coffee</h3>
+            <p class="card__desc">
+              A responsive landing page for a local coffee shop featuring an
+              online menu, location map, and accessible navigation.
+            </p>
+          </article>
+          <article class="card" tabindex="0">
+            <img
+              class="card__image"
+              src="https://placehold.co/560x350"
+              alt="Screenshot of Project Two"
+            />
+            <h3 class="card__title">Budget Tracker</h3>
+            <p class="card__desc">
+              A personal finance web app that helps users manage income,
+              expenses, and savings goals with data visualizations.
+            </p>
+          </article>
+          <article class="card" tabindex="0">
+            <img
+              class="card__image"
+              src="https://placehold.co/560x350"
+              alt="Screenshot of Project Three"
+            />
+            <h3 class="card__title">TaskFlow App</h3>
+            <p class="card__desc">
+              A productivity web app built to organize daily tasks and projects.
+              Features include drag-and-drop task management, deadline
+              reminders, and a clean, responsive UI.
+            </p>
+          </article>
+        </div>
+        <div class="latest-projects__actions">
+          <a class="button button--primary" href="#">See More Projects</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <p class="footer__text">
+        &copy; Portfolio Homepage Mockup 2025. Built with HTML, SCSS, and
+        accessibility in mind.
+      </p>
+    </footer>
+  </body>
+</html>

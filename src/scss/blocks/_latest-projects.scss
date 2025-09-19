@@ -1,0 +1,37 @@
+@use '../utils/utils' as utils;
+
+.latest-projects {
+  padding: 4rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+
+  &__title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: utils.$text-color;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  &__actions {
+    text-align: center;
+  }
+
+  @include utils.respond(tablet) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include utils.respond(desktop) {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+}

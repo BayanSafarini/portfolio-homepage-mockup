@@ -1,0 +1,13 @@
+@use '../utils/utils' as utils;
+
+.footer {
+  background: utils.$primary-color;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+
+  &__text {
+    font-size: 0.9rem;
+  }
+}

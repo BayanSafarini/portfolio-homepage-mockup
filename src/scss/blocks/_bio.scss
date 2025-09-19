@@ -1,0 +1,68 @@
+@use '../utils/utils' as utils;
+
+.bio {
+  padding: 6rem 1rem 3rem 1rem;
+  background-image: url(../src/img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+
+  &__inner { 
+    max-width: 1100px; 
+    margin: 0 auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  &__image-wrapper {
+    text-align: center;
+  }
+
+  &__image {
+    max-width: 320px;
+    max-height: 320px;
+    border-radius: 5%;
+  }
+
+  &__content {
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px) grayscale(25%) hue-rotate(30deg);
+    border-radius: 5%;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    margin-bottom: 1.5rem;
+    color: utils.$muted-color;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @include utils.respond(tablet) {
+    &__inner {
+      grid-template-columns: 1fr 1fr; 
+    }
+    &__content {
+      text-align: left;
+    }
+    &__image-wrapper {
+      text-align: left;
+    }
+  }
+}

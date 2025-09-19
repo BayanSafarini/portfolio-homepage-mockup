@@ -1,0 +1,32 @@
+@use "resets";
+@use '../utils/utils' as utils;
+
+a {
+  color: utils.$primary-color;
+  text-decoration: none;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  background: utils.$bg-color;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* headings */
+h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 0.75rem 0; }
+p { margin: 0 0 1rem 0; }
+
